@@ -22,7 +22,7 @@ class TaskResource extends JsonResource
         return [
             'id' => (int) $this->id,
             'text' => (string) $this->text,
-            'id_done' => (bool) $this->is_done,
+            'is_done' => (bool) $this->is_done,
         ];
     }
 }
