@@ -17,7 +17,10 @@ Repository with example tasks project.
 
 ## Installation
 Go to project directory and run:
-``docker up``
+
+``docker-compose up``
+
+After that you can find a documentation on _"localhost:8000/api/documentation"_
 
 ## Tests
 From docker run
