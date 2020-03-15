@@ -8,12 +8,17 @@ services:
         uid: ${UID}
     container_name: laravel-app
     environment:
+      - DB_HOST=${DB_HOST}
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_PASSWORD=${DB_PASSWORD}
       - APACHE_RUN_USER=#${UID}
       - APACHE_RUN_GROUP=#${UID}
     volumes:
       - .:/var/www/html
     ports:
       - 8000:80
+    entrypoint:
+      - /root/init.sh
     networks:
       backend:
         aliases:
