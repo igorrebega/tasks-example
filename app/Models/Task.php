@@ -6,9 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class Task
- * author i.rebega@iriscrm.com
  */
 class Task extends Model
 {
-    //
+    /** @var mixed[] Disable guard */
+    protected $guarded = [];
+
+    /** @var string[] Cast Rules */
+    protected $casts = [
+        'is_done' => 'bool'
+    ];
 }

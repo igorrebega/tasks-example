@@ -14,3 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('task', 'TaskController@index');
+Route::post('task', 'TaskController@create');
+
+Route::put('task/{task}/done', 'TaskDoneController@create');
+Route::put('task/{task}/undone', 'TaskDoneController@destroy');

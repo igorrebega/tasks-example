@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
 /**
@@ -15,10 +16,10 @@ class TaskCollectionResource extends ResourceCollection
      *
      * @param Request $request Request
      *
-     * @return array Result
+     * @return AnonymousResourceCollection Result
      */
-    public function toArray($request)
+    public function toArray($request): AnonymousResourceCollection
     {
-        return parent::toArray($request);
+        return TaskResource::collection($this);
     }
 }
