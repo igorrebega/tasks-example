@@ -24,7 +24,6 @@ class TaskIndexRequest extends FormRequest
     public function rules()
     {
         return [
-            'perPage' => 'nullable|integer',
             'page' => 'nullable|integer'
         ];
     }
